@@ -1,0 +1,13 @@
+services:
+  api:
+    restart: always
+    build: .
+    container_name: api
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+    environment:
+      - PORT=8081
+      - API_KEY=          
